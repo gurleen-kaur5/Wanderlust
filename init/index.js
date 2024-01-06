@@ -20,6 +20,7 @@ const initDB = async()=>{
     await Listing.deleteMany({});
     await Listing.insertMany(data.data);
     console.log("data was initialised");
+    console.log(data.data)
 }
 
 initDB();
