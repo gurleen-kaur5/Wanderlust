@@ -33,6 +33,8 @@ router.get("/login",(req, res)=>{
 });
 router.post("/login",
  saveRedirectUrl,
+ //middleware passport.authenticate
+ 
  passport.authenticate("local", 
 {failureRedirect: "/login", 
 failureFlash: true,}) ,

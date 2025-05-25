@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
+
 const ejsMate = require("ejs-mate");
 const ExpressError= require("./utils/ExpressError.js");
 const session = require("express-session");
@@ -57,6 +58,10 @@ app.get("/",(req,res)=>{
 //session and flash should be mentioned before routes
 app.use(session(sessionOptions));
 app.use(flash());
+
+
+
+
 //passport uses session as each session has a user
 app.use(passport.initialize());
 app.use(passport.session());
